@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committees - GMSA-UDS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-wrapper">
+                    <img src="logo-gmsa.png" alt="GMSA Logo" class="logo">
+                    <img src="logo-uds.png" alt="UDS Logo" class="logo">
+                </div>
+                <div class="logo-text">
+                    <h1>GMSA<span class="gold-text">-UDS</span></h1>
+                    <p>Ghana Muslim Students Association</p>
+                </div>
+            </div>
+            
+            <div class="nav-tabs">
+                <a href="index.html" class="nav-tab" data-tab="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="committees.html" class="nav-tab active" data-tab="committees">
+                    <i class="fas fa-users"></i>
+                    <span>Committees</span>
+                </a>
+                <a href="announcements.html" class="nav-tab" data-tab="announcements">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Announcements</span>
+                </a>
+                <div class="nav-slider"></div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link">
+            <i class="fas fa-home"></i> Home
+        </a>
+        <a href="committees.html" class="mobile-nav-link active">
+            <i class="fas fa-users"></i> Committees
+        </a>
+        <a href="announcements.html" class="mobile-nav-link">
+            <i class="fas fa-bullhorn"></i> Announcements
+        </a>
+    </div>
+
+    <!-- Committees Hero Section -->
+    <section class="hero-section" id="committees-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate__animated animate__fadeInUp">
+            <div class="islamic-ornament top-ornament">
+                <i class="fas fa-users"></i>
+                <i class="fas fa-handshake"></i>
+                <i class="fas fa-users"></i>
+            </div>
+            
+            <h1 class="hero-title">Our Committees</h1>
+            <div class="hero-subtitle">
+                <p class="quran-verse">"And cooperate in righteousness and piety, but do not cooperate in sin and aggression..."</p>
+                <p class="quran-ref">— Qur'an 5:2</p>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#committees-list" class="cta-btn primary-btn">Explore Committees</a>
+                <a href="index.html#contact" class="cta-btn secondary-btn">Contact Leadership</a>
+            </div>
+            
+            <div class="islamic-ornament bottom-ornament">
+                <i class="fas fa-star-and-crescent"></i>
+                <i class="fas fa-pray"></i>
+                <i class="fas fa-star-and-crescent"></i>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Committees Main Content -->
+    <main class="main-content">
+        <section class="committees-section" id="committees-list">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h2 class="section-title">Our Working Committees</h2>
+                <p class="section-subtitle">Specialized teams serving the Muslim student community</p>
+            </div>
+            
+            <!-- Committee Filter -->
+            <div class="committee-filter">
+                <button class="filter-btn active" data-filter="all">All Committees</button>
+                <button class="filter-btn" data-filter="operational">Operational</button>
+                <button class="filter-btn" data-filter="administrative">Administrative</button>
+                <button class="filter-btn" data-filter="spiritual">Spiritual</button>
+            </div>
+            
+            <!-- Committees Grid -->
+            <div class="committees-grid">
+                <!-- Women's Wing -->
+                <div class="committee-card animate-on-scroll" data-category="operational">
+                    <div class="committee-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3 class="committee-title">Women's Wing</h3>
+                    <p class="committee-desc">Empowering and supporting female Muslim students through specialized programs and activities.</p>
+                    
+                    <div class="committee-leaders">
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4> Niimatu Mejida</h4>
+                                <p>Coordinator</p>
+                            </div>
+                        </div>
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Salma Suhuyini Abdul-Lateef</h4>
+                                <p>Assistant Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="committee-contact">
+                        <p><i class="fas fa-phone"></i> +233 594586611</p>
+                        <p><i class="fas fa-envelope"></i> mejidaniiamatu@gmail.com</p>
+                    </div>
+                    
+                    <div class="committee-tags">
+                        <span class="tag operational">Operational</span>
+                        <span class="tag active">Active</span>
+                    </div>
+                </div>
+                
+                <!-- Welfare Committee -->
+                <div class="committee-card animate-on-scroll" data-category="operational">
+                    <div class="committee-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="committee-title">Welfare Committee</h3>
+                    <p class="committee-desc">Ensuring the well-being and support of all members through assistance programs.</p>
+                    
+                    <div class="committee-leaders">
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Sualisu Mohammed Zakiyu</h4>
+                                <p>Chairman</p>
+                            </div>
+                        </div>
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Salma Suhuyini Abdul-Lateef</h4>
+                                <p>Vice Chairperson</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="committee-contact">
+                        <p><i class="fas fa-phone"></i> +233592275951</p>
+                        <p><i class="fas fa-envelope"></i> mohammedzakiyusualisu@gmail.com</p>
+                    </div>
+                    
+                    <div class="committee-tags">
+                        <span class="tag operational">Operational</span>
+                        <span class="tag active">Active</span>
+                    </div>
+                </div>
+                
+                <!-- Public Health Education Committee -->
+                <div class="committee-card animate-on-scroll" data-category="operational">
+                    <div class="committee-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="committee-title">Public Health Education Committee</h3>
+                    <p class="committee-desc">Promoting health awareness and Islamic perspectives on wellness.</p>
+                    
+                    <div class="committee-leaders">
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Abdul Basit Tungteeya Issah</h4>
+                                <p>Chairman</p>
+                            </div>
+                        </div>
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Sulemana Zoungara Abdul Fataw</h4>
+                                <p>Vice Chairman</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="committee-contact">
+                        <p><i class="fas fa-phone"></i> +233 550055795</p>
+                        <p><i class="fas fa-envelope"></i> issahabdulbasit0617@gmail.com</p>
+                    </div>
+                    
+                    <div class="committee-tags">
+                        <span class="tag operational">Operational</span>
+                        <span class="tag active">Active</span>
+                    </div>
+                </div>
+                
+                <!-- Publicity and Media Committee -->
+               
+                
+                <!-- IT Committee -->
+                <div class="committee-card animate-on-scroll" data-category="operational">
+                    <div class="committee-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="committee-title">IT Committee</h3>
+                    <p class="committee-desc">Managing technology infrastructure and digital platforms.</p>
+                    
+                    <div class="committee-leaders">
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Abdullah Mohammed Izu-deen Suguri-o</h4>
+                                <p>Lead Developer</p>
+                            </div>
+                        </div>
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Rashida Osei</h4>
+                                <p>Systems Admin</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="committee-contact">
+                        <p><i class="fas fa-phone"></i> +233 249775663/ 597565633</p>
+                        <p><i class="fas fa-envelope"></i>mohammedizu44@gmail.com</p>
+                    </div>
+                    
+                    <div class="committee-tags">
+                        <span class="tag operational">Operational</span>
+                        <span class="tag active">Active</span>
+                    </div>
+                </div>
+                
+                <!-- Mosque Management Committee -->
+                <div class="committee-card animate-on-scroll" data-category="spiritual">
+                    <div class="committee-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3 class="committee-title">Mosque Management Committee</h3>
+                    <p class="committee-desc">Overseeing mosque affairs, maintenance, and prayer arrangements.</p>
+                    
+                    <div class="committee-leaders">
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Ali Abdul-Rahman</h4>
+                                <p>Coordinator</p>
+                            </div>
+                        </div>
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Seidu Abdul Hakim Wumpini</h4>
+                                <p>Assistant Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="committee-contact">
+                        <p><i class="fas fa-phone"></i> +233544160504</p>
+                        <p><i class="fas fa-envelope"></i> abdulrahamanali34@gmail.com</p>
+                    </div>
+                    
+                    <div class="committee-tags">
+                        <span class="tag spiritual">Spiritual</span>
+                        <span class="tag active">Active</span>
+                    </div>
+                </div>
+                
+                <!-- Da'awa Committee -->
+                <div class="committee-card animate-on-scroll" data-category="spiritual">
+                    <div class="committee-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3 class="committee-title">Da'awa Committee</h3>
+                    <p class="committee-desc">Organizing Islamic outreach and educational programs.</p>
+                    
+                    <div class="committee-leaders">
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Yunus Abdul Kareem Dimmie</h4>
+                                <p>Chairman</p>
+                            </div>
+                        </div>
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Abdullah Mohammed</h4>
+                                <p> Vice Chairman</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="committee-contact">
+                        <p><i class="fas fa-phone"></i> +233 551260093</p>
+                        <p><i class="fas fa-envelope"></i> abdulkarimuyunus261@gmail.com</p>
+                    </div>
+                    
+                    <div class="committee-tags">
+                        <span class="tag spiritual">Spiritual</span>
+                        <span class="tag active">Active</span>
+                    </div>
+                </div>
+                
+                <!-- Organizing Committee -->
+                <div class="committee-card animate-on-scroll" data-category="administrative">
+                    <div class="committee-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="committee-title">Organizing Committee</h3>
+                    <p class="committee-desc">Planning and executing events and activities.</p>
+                    
+                    <div class="committee-leaders">
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Mutiu Yombu Abdulai</h4>
+                                <p>Main Organizer</p>
+                            </div>
+                        </div>
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Fuseini Zeinab</h4>
+                                <p>Assistant Organizer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="committee-contact">
+                        <p><i class="fas fa-phone"></i> +233 596453142</p>
+                        <p><i class="fas fa-envelope"></i> abdulaimutiuyombu@gmail.com</p>
+                    </div>
+                    
+                    <div class="committee-tags">
+                        <span class="tag administrative">Administrative</span>
+                        <span class="tag active">Active</span>
+                    </div>
+                </div>
+                
+                <!-- Finance Committee -->
+                <div class="committee-card animate-on-scroll" data-category="administrative">
+                    <div class="committee-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="committee-title">Finance Committee</h3>
+                    <p class="committee-desc">Managing financial resources and budgeting.</p>
+                    
+                    <div class="committee-leaders">
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Alhassan Iffat</h4>
+                                <p>Treasurer</p>
+                            </div>
+                        </div>
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Mubarak Ishaque Mariam</h4>
+                                <p>Assistant Treasurer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="committee-contact">
+                        <p><i class="fas fa-phone"></i>  +233 598501425/ 202440599</p>
+                        <p><i class="fas fa-envelope"></i> iffatalhassan2@gmail.com</p>
+                    </div>
+                    
+                    <div class="committee-tags">
+                        <span class="tag administrative">Administrative</span>
+                        <span class="tag active">Active</span>
+                    </div>
+                </div>
+                
+                <!-- Electoral Committee -->
+                <div class="committee-card animate-on-scroll" data-category="administrative">
+                    <div class="committee-icon">
+                        <i class="fas fa-vote-yea"></i>
+                    </div>
+                    <h3 class="committee-title">Electoral Committee</h3>
+                    <p class="committee-desc">Overseeing elections and electoral processes.</p>
+                    
+                    <div class="committee-leaders">
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Ziblim Abdul Rahim</h4>
+                                <p>Chairman</p>
+                            </div>
+                        </div>
+                        <div class="leader">
+                            <div class="leader-img">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="leader-info">
+                                <h4>Ziblim Abdul Salam</h4>
+                                <p>Deputy Chairman</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="committee-contact">
+                        <p><i class="fas fa-phone"></i> +233553849162</p>
+                        <p><i class="fas fa-envelope"></i> ziblimabdulrahim172@gmail.com</p>
+                    </div>
+                    
+                    <div class="committee-tags">
+                        <span class="tag administrative">Administrative</span>
+                        <span class="tag periodic">Periodic</span>
+                    </div>
+                </div>
+                
+                <!-- Audit Committee -->
+               
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h2>GMSA<span class="gold-text">-UDS</span></h2>
+                    <p>Ghana Muslim Students Association</p>
+                </div>
+                <p class="footer-description">Building a united Muslim student community grounded in faith, knowledge, and service.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1D9YQ5xvA8/" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="https://youtube.com/@gmsaudstlc?si=0BYmq0vOQ4SRqhPY" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/gmsaudstlc?igsh=MWtzemppaGV3cm1rNA==" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="tiktok.com/@gmsaudstlc" class="social-link"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="committees.html">Committees</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="index.html#contact">Contact Leadership</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> University for Development Studies, Ghana</li>
+                    <li><i class="fas fa-envelope"></i> gmsaudstlcofficial@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +233 54 878 7551</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> GMSA-UDS. All rights reserved.</p>
+            <p class="islamic-greeting">May Allah bless and guide us all.</p>
+        </div>
+    </footer>
+
+    <!-- Committee-specific JS -->
+    <script>
+        // Committee Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const committeeCards = document.querySelectorAll('.committee-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Filter cards
+                    committeeCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            if (card.getAttribute('data-category') === filter) {
+                                card.style.display = 'block';
+                                setTimeout(() => {
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'translateY(0)';
+                                }, 10);
+                            } else {
+                                card.style.opacity = '0';
+                                card.style.transform = 'translateY(20px)';
+                                setTimeout(() => {
+                                    card.style.display = 'none';
+                                }, 300);
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Committee card hover effects
+            committeeCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'var(--shadow)';
+                });
+            });
+        });
+    </script>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>

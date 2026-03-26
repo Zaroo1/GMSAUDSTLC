@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMSA-UDS | Ghana Muslim Students Association</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-wrapper">
+                    <img src="logo-gmsa.png" alt="GMSA Logo" class="logo">
+                    <img src="logo-uds.png" alt="UDS Logo" class="logo">
+                </div>
+                <div class="logo-text">
+                    <h1>GMSA<span class="gold-text">-UDS,TLC</span></h1>
+                    <p>Ghana Muslim Students Association</p>
+                </div>
+            </div>
+            
+            <div class="nav-tabs">
+                <a href="index.html" class="nav-tab active" data-tab="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="committees.html" class="nav-tab" data-tab="committees">
+                    <i class="fas fa-users"></i>
+                    <span>Committees</span>
+                </a>
+                <a href="announcements.html" class="nav-tab" data-tab="announcements">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Announcements</span>
+                </a>
+                <div class="nav-slider"></div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link active">
+            <i class="fas fa-home"></i> Home
+        </a>
+        <a href="committees.html" class="mobile-nav-link">
+            <i class="fas fa-users"></i> Committees
+        </a>
+        <a href="announcements.html" class="mobile-nav-link">
+            <i class="fas fa-bullhorn"></i> Announcements
+        </a>
+    </div>
+
+    <!-- Home Page Hero -->
+    <section class="hero-section" id="home-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate__animated animate__fadeInUp">
+            <div class="islamic-ornament top-ornament">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            
+            <h1 class="hero-title">Welcome to GMSA-UDS TAMALE CAMPUS</h1>
+            <div class="hero-subtitle">
+                <p class="quran-verse">"And hold firmly to the rope of Allah all together and do not become divided..."</p>
+                <p class="quran-ref">— Qur'an 3:103</p>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#about" class="cta-btn primary-btn">Discover Our Mission</a>
+                <a href="#contact" class="cta-btn secondary-btn">Connect With Us</a>
+            </div>
+            
+            <div class="islamic-ornament bottom-ornament">
+                <i class="fas fa-star-and-crescent"></i>
+                <i class="fas fa-pray"></i>
+                <i class="fas fa-star-and-crescent"></i>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Daily Quote Section -->
+        <section class="daily-quote-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <h2 class="section-title">Daily Islamic Reminder</h2>
+                <p class="section-subtitle">Words of wisdom for spiritual growth</p>
+            </div>
+            
+            <div class="quote-container">
+                <div class="quote-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-book-quran"></i>
+                    </div>
+                    <p class="quote-text" id="daily-quote">Loading daily reminder...</p>
+                    <p class="quote-ref" id="quote-ref"></p>
+                    <div class="quote-controls">
+                        <button id="prev-quote" class="quote-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="next-quote" class="quote-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="section-header">
+                <h2 class="section-title">About GMSA-UDS</h2>
+                <p class="section-subtitle">Unity • Knowledge • Service • Faith</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text animate__animated animate__fadeInLeft">
+                    <p>The Ghana Muslim Students Association at the University for Development Studies (GMSA-UDS) serves as a spiritual, academic, and social platform for Muslim students on campus.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <i class="fas fa-mosque"></i>
+                            <h4>Spiritual Development</h4>
+                            <p>Regular prayers, Qur'an study circles, and Islamic lectures</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Community Service</h4>
+                            <p>Welfare programs and community outreach initiatives</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Academic Support</h4>
+                            <p>Study groups, mentorship, and educational seminars</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-heart"></i>
+                            <h4>Unity & Brotherhood</h4>
+                            <p>Building strong bonds among Muslim students</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image animate__animated animate__fadeInRight">
+                    <div class="image-frame">
+                        <div class="frame-decoration"></div>
+                        <img src="about-image.jpg" alt="GMSA-UDS Members" class="about-img">
+                        <div class="frame-decoration"></div>
+                    </div>
+                </div>
+<br>
+<!-- business-->
+ <div class="about-image animate__animated animate__fadeInRight">
+                    <div class="image-frame">
+                        <div class="frame-decoration"></div>
+                        <img src="business.jpg" alt="GMSA-UDS Business" class="about-img">
+                        <div class="frame-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Leadership Section -->
+        <section class="contact-section" id="contact">
+            <div class="section-header">
+                <h2 class="section-title">Contact Leadership</h2>
+                <p class="section-subtitle">Reach out to our executive members</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h3>Send Message via WhatsApp</h3>
+                        <p>Your message will be sent to the President of the Association</p>
+                    </div>
+                    
+                    <form id="whatsapp-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="role"><i class="fas fa-user-tag"></i> Your Role</label>
+                            <div class="role-selector">
+                                <div class="role-option" data-role="Student">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Student</span>
+                                </div>
+                                <div class="role-option" data-role="Member">
+                                    <i class="fas fa-users"></i>
+                                    <span>Member</span>
+                                </div>
+                                <div class="role-option" data-role="Visitor">
+                                    <i class="fas fa-user-clock"></i>
+                                    <span>Visitor</span>
+                                </div>
+                                <input type="hidden" id="role" value="Student" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment-alt"></i> Your Message</label>
+                            <textarea id="message" placeholder="Type your message here..." rows="4" required></textarea>
+                            <div class="char-count">
+                                <span id="char-counter">0</span>/500 characters
+                            </div>
+                        </div>
+                        
+                        <div class="form-preview">
+                            <h4>Preview:</h4>
+                            <div class="preview-box">
+                                <p id="preview-text">Assalamu Alaikum, [Name] here ([Role]). [Message] Jazakumullahu Khairan.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                            </button>
+                            <!--<button type="button" id="copy-message" class="copy-btn">
+                                <i class="far fa-copy"></i> Copy Message
+                            </button>-->
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="contact-leaders">
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="leader-name">GMSA President</h3>
+                        <p class="leader-role">Ziblim Abdul-Salam | Executive Head</p>
+                        <div class="leader-contact">
+                            <p><i class="fas fa-phone"></i> +233 54 878 7551</p>
+                            <p><i class="fas fa-envelope"></i> ziblimabdul386@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <i class="fas fa-pray"></i>
+                        </div>
+                        <h3 class="leader-name">Chief Imam</h3>
+                        <p class="leader-role">Yunus Ibnul  Abdilkarim Dimmie  | Spiritual Leader</p>
+                        <div class="leader-contact">
+                            <p><i class="fas fa-phone"></i>+233 55 126 0093</p>
+                            <p><i class="fas fa-envelope"></i> abdulkarimuyunus261@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h2>GMSA<span class="gold-text">-UDS TLC</span></h2>
+                    <p>Ghana Muslim Students Association</p>
+                </div>
+                <p class="footer-description">Building a united Muslim student community grounded in faith, knowledge, and service.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1D9YQ5xvA8/" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="tiktok.com/@gmsaudstlc" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/gmsaudstlc?igsh=MWtzemppaGV3cm1rNA==" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@gmsaudstlc?si=0BYmq0vOQ4SRqhPY" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="committees.html">Committees</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="#contact">Contact Leadership</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> University for Development Studies, Tamale Campus</li>
+                    <li><i class="fas fa-envelope"></i> gmsaudstlcofficial@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +233 54 878 7551</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> GMSA-UDS. All rights reserved.</p>
+
+<p class="islamic-greeting">Developed with ❤️</p>
+
+            <p class="islamic-greeting">May Allah bless and guide us all.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

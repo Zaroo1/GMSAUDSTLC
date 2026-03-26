@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramadan 2026 Prayer Schedule</title>
+</head>
+
+<body style="margin:0; font-family:Arial, sans-serif; background:#f4f6f5;">
+
+<div id="schedule" style="
+    width:95%;
+    max-width:500px;
+    margin:20px auto;
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    box-sizing:border-box;
+">
+
+    <!-- Date Badge -->
+    <div style="
+        background:#0f5132;
+        color:white;
+        width:80px;
+        text-align:center;
+        padding:12px;
+        border-radius:15px;
+        float:right;
+        font-size:14px;
+    ">
+        <strong style="font-size:22px;">10</strong><br>
+        FEB<br>
+        2026
+    </div>
+
+    <h2 style="color:#0f5132; margin-top:0;">
+        Ramadan 2026 Prayer Schedule
+    </h2>
+
+    <p style="color:#555; line-height:1.5; font-size:15px;">
+        Complete Ramadan prayer timetable for the campus mosque.
+        Taraweeh prayers will begin at 8:00 PM daily.
+    </p>
+
+    <!-- Prayer Times -->
+    <div style="
+        background:#fff8dc;
+        padding:18px;
+        border-radius:15px;
+        margin-top:15px;
+        font-size:16px;
+    ">
+        <p style="margin:8px 0;">🌅 <strong>Fajr:</strong> 4:45 AM</p>
+        <p style="margin:8px 0;">☀ <strong>Dhuhr:</strong> 1:00 PM</p>
+        <p style="margin:8px 0;">🌤 <strong>Asr:</strong> 4:15 PM</p>
+        <p style="margin:8px 0;">🌇 <strong>Maghrib:</strong> 6:30 PM</p>
+        <p style="margin:8px 0;">🌙 <strong>Isha:</strong> 8:00 PM</p>
+    </div>
+
+    <!-- Buttons -->
+    <div style="margin-top:20px;">
+        <button onclick="downloadPDF()" 
+        style="
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:12px;
+            background:#0f5132;
+            color:white;
+            font-size:15px;
+            cursor:pointer;
+            margin-bottom:12px;
+        ">
+        ⬇ Download Schedule (PDF)
+        </button>
+
+        <button onclick="setReminder()" 
+        style="
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:12px;
+            background:#e6e6e6;
+            color:#0f5132;
+            font-size:15px;
+            cursor:pointer;
+        ">
+        🔔 Set Reminder
+        </button>
+    </div>
+
+    <div style="clear:both;"></div>
+
+</div>
+
+<script>
+function downloadPDF() {
+    const content = document.getElementById("schedule").innerHTML;
+    const win = window.open('', '', 'width=800,height=600');
+    win.document.write('<html><head><title>Ramadan 2026 Schedule</title></head><body style="font-family:Arial;">');
+    win.document.write(content);
+    win.document.write('</body></html>');
+    win.document.close();
+    win.print();
+}
+
+function setReminder() {
+    alert("Reminder feature coming soon! InshaAllah 😊");
+}
+</script>
+
+</body>
+</html>
