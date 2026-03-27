@@ -1,115 +1,378 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ramadan 2026 Prayer Schedule</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Ramadan 2026 Prayer Schedule - GMSA-UDS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .ramadan-container {
+            max-width: 600px;
+            margin: 120px auto 60px;
+            padding: 2rem;
+        }
+        
+        .ramadan-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ramadan-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-green), var(--gold));
+        }
+        
+        .date-badge {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: var(--white);
+            width: 80px;
+            text-align: center;
+            padding: 12px;
+            border-radius: 15px;
+            float: right;
+            font-size: 14px;
+            margin-bottom: 1rem;
+        }
+        
+        .date-badge strong {
+            font-size: 22px;
+            display: block;
+        }
+        
+        .ramadan-title {
+            color: var(--primary-green);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .ramadan-desc {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .prayer-times-box {
+            background: var(--gold-light);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1.5rem 0;
+        }
+        
+        .prayer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+        
+        .prayer-row:last-child {
+            border-bottom: none;
+        }
+        
+        .prayer-row span:first-child {
+            font-weight: 600;
+            color: var(--dark-green);
+        }
+        
+        .btn-ramadan {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .btn-download {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: var(--white);
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-reminder {
+            background: var(--light-gray);
+            color: var(--primary-green);
+        }
+        
+        .btn-reminder:hover {
+            background: var(--gold);
+            color: var(--dark-green);
+            transform: translateY(-2px);
+        }
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        @media (max-width: 768px) {
+            .ramadan-container {
+                margin-top: 100px;
+                padding: 1rem;
+            }
+            
+            .ramadan-card {
+                padding: 1.5rem;
+            }
+            
+            .ramadan-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .date-badge {
+                float: none;
+                margin-bottom: 1rem;
+                margin-left: auto;
+            }
+        }
+    </style>
 </head>
+<body style="background: var(--off-white);">
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-wrapper">
+                    <img src="logo-gmsa.png" alt="GMSA Logo" class="logo">
+                    <img src="logo-uds.png" alt="UDS Logo" class="logo">
+                </div>
+                <div class="logo-text">
+                    <h1>GMSA<span class="gold-text">-UDS</span></h1>
+                    <p>Ghana Muslim Students Association</p>
+                </div>
+            </div>
+            
+            <div class="nav-tabs">
+                <a href="index.html" class="nav-tab">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="committees.html" class="nav-tab">
+                    <i class="fas fa-users"></i>
+                    <span>Committees</span>
+                </a>
+                <a href="announcements.html" class="nav-tab active">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Announcements</span>
+                </a>
+                <div class="nav-slider"></div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-<body style="margin:0; font-family:Arial, sans-serif; background:#f4f6f5;">
-
-<div id="schedule" style="
-    width:95%;
-    max-width:500px;
-    margin:20px auto;
-    background:white;
-    border-radius:20px;
-    padding:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-    box-sizing:border-box;
-">
-
-    <!-- Date Badge -->
-    <div style="
-        background:#0f5132;
-        color:white;
-        width:80px;
-        text-align:center;
-        padding:12px;
-        border-radius:15px;
-        float:right;
-        font-size:14px;
-    ">
-        <strong style="font-size:22px;">10</strong><br>
-        FEB<br>
-        2026
+    <div class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link">
+            <i class="fas fa-home"></i> Home
+        </a>
+        <a href="committees.html" class="mobile-nav-link">
+            <i class="fas fa-users"></i> Committees
+        </a>
+        <a href="announcements.html" class="mobile-nav-link active">
+            <i class="fas fa-bullhorn"></i> Announcements
+        </a>
     </div>
 
-    <h2 style="color:#0f5132; margin-top:0;">
-        Ramadan 2026 Prayer Schedule
-    </h2>
+    <div class="ramadan-container">
+        <div class="ramadan-card">
+            <div class="clearfix">
+                <div class="date-badge">
+                    <strong>10</strong>
+                    FEB<br>
+                    2026
+                </div>
+            </div>
 
-    <p style="color:#555; line-height:1.5; font-size:15px;">
-        Complete Ramadan prayer timetable for the campus mosque.
-        Taraweeh prayers will begin at 8:00 PM daily.
-    </p>
+            <h2 class="ramadan-title">
+                <i class="fas fa-moon" style="color: var(--gold);"></i> 
+                Ramadan 2026 Prayer Schedule
+            </h2>
 
-    <!-- Prayer Times -->
-    <div style="
-        background:#fff8dc;
-        padding:18px;
-        border-radius:15px;
-        margin-top:15px;
-        font-size:16px;
-    ">
-        <p style="margin:8px 0;">🌅 <strong>Fajr:</strong> 4:45 AM</p>
-        <p style="margin:8px 0;">☀ <strong>Dhuhr:</strong> 1:00 PM</p>
-        <p style="margin:8px 0;">🌤 <strong>Asr:</strong> 4:15 PM</p>
-        <p style="margin:8px 0;">🌇 <strong>Maghrib:</strong> 6:30 PM</p>
-        <p style="margin:8px 0;">🌙 <strong>Isha:</strong> 8:00 PM</p>
+            <p class="ramadan-desc">
+                Complete Ramadan prayer timetable for the campus mosque.
+                Taraweeh prayers will begin at 8:00 PM daily.
+                May Allah accept our fasts and prayers. Ameen.
+            </p>
+
+            <div class="prayer-times-box">
+                <div class="prayer-row">
+                    <span><i class="fas fa-sun" style="color: var(--gold);"></i> Fajr</span>
+                    <span><strong>4:45 AM</strong></span>
+                </div>
+                <div class="prayer-row">
+                    <span><i class="fas fa-sun" style="color: var(--gold);"></i> Dhuhr</span>
+                    <span><strong>1:00 PM</strong></span>
+                </div>
+                <div class="prayer-row">
+                    <span><i class="fas fa-cloud-sun" style="color: var(--gold);"></i> Asr</span>
+                    <span><strong>4:15 PM</strong></span>
+                </div>
+                <div class="prayer-row">
+                    <span><i class="fas fa-sunset" style="color: var(--gold);"></i> Maghrib</span>
+                    <span><strong>6:30 PM</strong></span>
+                </div>
+                <div class="prayer-row">
+                    <span><i class="fas fa-moon" style="color: var(--gold);"></i> Isha</span>
+                    <span><strong>8:00 PM</strong></span>
+                </div>
+            </div>
+
+            <button onclick="downloadPDF()" class="btn-ramadan btn-download">
+                <i class="fas fa-download"></i> Download Schedule (PDF)
+            </button>
+
+            <button onclick="setReminder()" class="btn-ramadan btn-reminder">
+                <i class="fas fa-bell"></i> Set Reminder
+            </button>
+            
+            <div style="margin-top: 1.5rem; text-align: center;">
+                <a href="announcements.html" style="color: var(--primary-green); text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i> Back to Announcements
+                </a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem; color: var(--gray); font-size: 0.9rem;">
+            <p>For SMS updates on prayer times, <a href="index.html#subscribe-section" style="color: var(--primary-green);">subscribe to our SMS alerts</a></p>
+        </div>
     </div>
 
-    <!-- Buttons -->
-    <div style="margin-top:20px;">
-        <button onclick="downloadPDF()" 
-        style="
-            width:100%;
-            padding:14px;
-            border:none;
-            border-radius:12px;
-            background:#0f5132;
-            color:white;
-            font-size:15px;
-            cursor:pointer;
-            margin-bottom:12px;
-        ">
-        ⬇ Download Schedule (PDF)
-        </button>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h2>GMSA<span class="gold-text">-UDS</span></h2>
+                    <p>Ghana Muslim Students Association</p>
+                </div>
+                <p class="footer-description">Building a united Muslim student community grounded in faith, knowledge, and service.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1D9YQ5xvA8/" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="https://youtube.com/@gmsaudstlc?si=0BYmq0vOQ4SRqhPY" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/gmsaudstlc?igsh=MWtzemppaGV3cm1rNA==" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="tiktok.com/@gmsaudstlc" class="social-link"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="committees.html">Committees</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="index.html#contact">Contact Leadership</a></li>
+                    <li><a href="index.html#subscribe-section">Subscribe to SMS</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> University for Development Studies, Ghana</li>
+                    <li><i class="fas fa-envelope"></i> gmsaudstlcofficial@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +233 54 878 7551</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> GMSA-UDS. All rights reserved.</p>
+            <p class="islamic-greeting">May Allah bless and guide us all.</p>
+        </div>
+    </footer>
 
-        <button onclick="setReminder()" 
-        style="
-            width:100%;
-            padding:14px;
-            border:none;
-            border-radius:12px;
-            background:#e6e6e6;
-            color:#0f5132;
-            font-size:15px;
-            cursor:pointer;
-        ">
-        🔔 Set Reminder
-        </button>
-    </div>
-
-    <div style="clear:both;"></div>
-
-</div>
-
-<script>
-function downloadPDF() {
-    const content = document.getElementById("schedule").innerHTML;
-    const win = window.open('', '', 'width=800,height=600');
-    win.document.write('<html><head><title>Ramadan 2026 Schedule</title></head><body style="font-family:Arial;">');
-    win.document.write(content);
-    win.document.write('</body></html>');
-    win.document.close();
-    win.print();
-}
-
-function setReminder() {
-    alert("Reminder feature coming soon! InshaAllah 😊");
-}
-</script>
-
+    <script src="script.js"></script>
+    <script>
+        function downloadPDF() {
+            const content = document.querySelector('.ramadan-card').cloneNode(true);
+            const win = window.open('', '', 'width=800,height=600');
+            win.document.write(`
+                <html>
+                <head>
+                    <title>Ramadan 2026 Schedule</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 2rem; }
+                        .prayer-times-box { background: #fff8dc; padding: 1.5rem; border-radius: 12px; }
+                        .prayer-row { display: flex; justify-content: space-between; padding: 0.5rem 0; }
+                        .date-badge { background: #0a5c36; color: white; padding: 0.5rem; border-radius: 8px; float: right; }
+                        .clearfix::after { clear: both; display: table; content: ''; }
+                        button { display: none; }
+                    </style>
+                </head>
+                <body>
+                    ${content.outerHTML}
+                </body>
+                </html>
+            `);
+            win.document.close();
+            win.print();
+        }
+        
+        function setReminder() {
+            if ('Notification' in window) {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        new Notification('GMSA-UDS Ramadan Reminder', {
+                            body: 'Taraweeh prayers begin at 8:00 PM daily. May Allah accept your worship.',
+                            icon: 'logo-gmsa.png'
+                        });
+                        alert('Reminder set! You will receive notifications for prayer times.');
+                    } else {
+                        alert('Please enable notifications to receive reminders. You can also subscribe to SMS updates on the homepage.');
+                    }
+                });
+            } else {
+                alert('Your browser does not support notifications. Please subscribe to SMS updates on the homepage.');
+            }
+        }
+        
+        function updateCurrentYear() {
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+        }
+        updateCurrentYear();
+        
+        // Mobile menu
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.mobile-nav');
+        if (menuBtn && mobileNav) {
+            menuBtn.addEventListener('click', () => {
+                const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                menuBtn.setAttribute('aria-expanded', !expanded);
+                mobileNav.style.display = expanded ? 'none' : 'block';
+                menuBtn.innerHTML = expanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+            });
+        }
+    </script>
 </body>
 </html>
