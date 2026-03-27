@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Committees - GMSA-UDS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <!-- Navigation (Same as index.html) -->
+    <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
             <div class="logo-section">
@@ -77,7 +77,7 @@
             
             <div class="hero-cta">
                 <a href="#committees-list" class="cta-btn primary-btn">Explore Committees</a>
-                <a href="index.html#contact" class="cta-btn secondary-btn">Contact Leadership</a>
+                <a href="index.html#subscribe-section" class="cta-btn secondary-btn">Get SMS Updates</a>
             </div>
             
             <div class="islamic-ornament bottom-ornament">
@@ -127,7 +127,7 @@
                                 <i class="fas fa-user-circle"></i>
                             </div>
                             <div class="leader-info">
-                                <h4> Niimatu Mejida</h4>
+                                <h4>Niimatu Mejida</h4>
                                 <p>Coordinator</p>
                             </div>
                         </div>
@@ -233,9 +233,6 @@
                     </div>
                 </div>
                 
-                <!-- Publicity and Media Committee -->
-               
-                
                 <!-- IT Committee -->
                 <div class="committee-card animate-on-scroll" data-category="operational">
                     <div class="committee-icon">
@@ -266,8 +263,8 @@
                     </div>
                     
                     <div class="committee-contact">
-                        <p><i class="fas fa-phone"></i> +233 249775663/ 597565633</p>
-                        <p><i class="fas fa-envelope"></i>mohammedizu44@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +233 249775663 / 597565633</p>
+                        <p><i class="fas fa-envelope"></i> mohammedizu44@gmail.com</p>
                     </div>
                     
                     <div class="committee-tags">
@@ -340,7 +337,7 @@
                             </div>
                             <div class="leader-info">
                                 <h4>Abdullah Mohammed</h4>
-                                <p> Vice Chairman</p>
+                                <p>Vice Chairman</p>
                             </div>
                         </div>
                     </div>
@@ -426,7 +423,7 @@
                     </div>
                     
                     <div class="committee-contact">
-                        <p><i class="fas fa-phone"></i>  +233 598501425/ 202440599</p>
+                        <p><i class="fas fa-phone"></i> +233 598501425 / 202440599</p>
                         <p><i class="fas fa-envelope"></i> iffatalhassan2@gmail.com</p>
                     </div>
                     
@@ -475,16 +472,11 @@
                         <span class="tag periodic">Periodic</span>
                     </div>
                 </div>
-                
-                <!-- Audit Committee -->
-               
-                    </div>
-                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer (Same as index.html) -->
+    <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -508,6 +500,7 @@
                     <li><a href="committees.html">Committees</a></li>
                     <li><a href="announcements.html">Announcements</a></li>
                     <li><a href="index.html#contact">Contact Leadership</a></li>
+                    <li><a href="index.html#subscribe-section">Subscribe to SMS</a></li>
                 </ul>
             </div>
             
@@ -529,20 +522,17 @@
 
     <!-- Committee-specific JS -->
     <script>
-        // Committee Filtering
         document.addEventListener('DOMContentLoaded', function() {
             const filterBtns = document.querySelectorAll('.filter-btn');
             const committeeCards = document.querySelectorAll('.committee-card');
             
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    // Update active button
                     filterBtns.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
                     
                     const filter = this.getAttribute('data-filter');
                     
-                    // Filter cards
                     committeeCards.forEach(card => {
                         if (filter === 'all') {
                             card.style.display = 'block';
@@ -569,7 +559,6 @@
                 });
             });
             
-            // Committee card hover effects
             committeeCards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-10px)';
@@ -584,7 +573,6 @@
         });
     </script>
     
-    <!-- Main Script -->
     <script src="script.js"></script>
 </body>
 </html>
