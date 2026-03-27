@@ -146,7 +146,6 @@ h1, h2, h3, h4 {
     height: 100vh;
     min-height: 700px;
     position: relative;
-    /* Slightly lighter, soft green overlay */
     background: linear-gradient(rgba(0, 80, 0, 0.5), rgba(0, 80, 0, 0.5)),
                 url('about-image.jpg') center/cover no-repeat;
     display: flex;
@@ -155,11 +154,9 @@ h1, h2, h3, h4 {
     text-align: center;
     color: var(--white);
     margin-top: 80px;
-    /* Optional: smooth fade-in effect for hero */
     animation: fadeIn 1.5s ease-out;
 }
 
-/* Optional fadeIn animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px);}
     to { opacity: 1; transform: translateY(0);}
@@ -194,25 +191,20 @@ h1, h2, h3, h4 {
 }
 
 .hero-title {
-    font-size: 4rem; /* large and prominent */
+    font-size: 4rem;
     margin-bottom: 1.5rem;
-    font-weight: 900; /* extra bold */
-    color: #ffffff; /* pure white */
-    text-shadow: 
-        0 2px 5px rgba(0,0,0,0.4),   /* subtle shadow for depth */
-        0 4px 10px rgba(0,0,0,0.3);  /* soft glow effect */
-    font-family: 'Amiri', serif; /* elegant serif font */
-    letter-spacing: 2px; /* slightly spaced letters for luxury feel */
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4), 0 4px 10px rgba(0,0,0,0.3);
+    font-family: 'Amiri', serif;
+    letter-spacing: 2px;
     line-height: 1.2;
     transition: all 0.3s ease;
 }
 
-/* Optional hover effect for hero titles */
 .hero-title:hover {
     transform: scale(1.05);
-    text-shadow: 
-        0 4px 10px rgba(0,0,0,0.5),
-        0 8px 20px rgba(0,0,0,0.4);
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5), 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .quran-verse {
@@ -232,6 +224,7 @@ h1, h2, h3, h4 {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cta-btn {
@@ -513,6 +506,318 @@ h1, h2, h3, h4 {
     transform: scale(1.05);
 }
 
+/* Mosque Section */
+.mosque-section {
+    margin: 6rem 0;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 3rem;
+    box-shadow: var(--shadow);
+}
+
+.mosque-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.mosque-text p {
+    color: var(--gray);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.prayer-times-mini {
+    background: var(--gold-light);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--gold);
+}
+
+.prayer-times-mini h4 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prayer-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+.prayer-row:last-child {
+    border-bottom: none;
+}
+
+.prayer-row span:first-child {
+    font-weight: 500;
+    color: var(--dark-green);
+}
+
+/* Rentals Section */
+.rentals-section {
+    margin: 6rem 0;
+    background: linear-gradient(135deg, var(--gold-light), #fff);
+    border-radius: var(--border-radius-lg);
+    padding: 3rem;
+}
+
+.rentals-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.rentals-text p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.rentals-list {
+    margin: 2rem 0;
+}
+
+.rental-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.rental-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow);
+}
+
+.rental-item i {
+    font-size: 2rem;
+    color: var(--primary-green);
+}
+
+.rental-item h4 {
+    margin-bottom: 0.25rem;
+}
+
+.rental-item p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.rental-contact {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.rental-contact p {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.rental-contact i {
+    color: var(--gold);
+    margin-right: 0.5rem;
+}
+
+/* SMS Subscribe Section */
+.sms-subscribe-section {
+    margin: 6rem 0;
+}
+
+.sms-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.sms-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.sms-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--gold);
+    font-size: 2rem;
+}
+
+.sms-card h3 {
+    margin-bottom: 1rem;
+}
+
+.sms-card p {
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.sms-form {
+    text-align: left;
+}
+
+.sms-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.sms-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark-green);
+}
+
+.sms-form label i {
+    margin-right: 0.5rem;
+    color: var(--primary-green);
+}
+
+.sms-form input,
+.sms-form select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.sms-form input:focus,
+.sms-form select:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(10, 92, 54, 0.1);
+}
+
+.sms-form small {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--gray);
+    font-size: 0.75rem;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.form-check input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.form-check label {
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.subscribe-sms-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.subscribe-sms-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.sms-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    display: none;
+}
+
+.sms-message.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.sms-message.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+.sms-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.info-card i {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.info-card h4 {
+    margin-bottom: 1rem;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    padding: 0.5rem 0;
+    color: var(--gray);
+}
+
+.info-card p {
+    color: var(--gray);
+}
+
 /* Contact Section */
 .contact-section {
     margin: 6rem 0;
@@ -644,8 +949,7 @@ h1, h2, h3, h4 {
     gap: 1rem;
 }
 
-.whatsapp-btn,
-.copy-btn {
+.whatsapp-btn {
     flex: 1;
     padding: 1rem;
     border: none;
@@ -659,26 +963,13 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-}
-
-.whatsapp-btn {
     background: linear-gradient(135deg, #25D366, #128C7E);
     color: var(--white);
-}
-
-.copy-btn {
-    background: var(--light-gray);
-    color: var(--dark-green);
 }
 
 .whatsapp-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-}
-
-.copy-btn:hover {
-    background: #e0e0e0;
-    transform: translateY(-2px);
 }
 
 .contact-leaders {
@@ -741,6 +1032,34 @@ h1, h2, h3, h4 {
     color: var(--primary-green);
 }
 
+/* Gallery Section (Commented but styled for future) */
+.gallery-section {
+    margin: 6rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
 /* Footer */
 .main-footer {
     background: linear-gradient(135deg, var(--dark-green), #06311e);
@@ -773,6 +1092,7 @@ h1, h2, h3, h4 {
 .social-links {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .social-link {
@@ -849,6 +1169,8 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .islamic-greeting {
@@ -904,7 +1226,10 @@ h1, h2, h3, h4 {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .about-content,
-    .contact-container {
+    .contact-container,
+    .mosque-content,
+    .rentals-content,
+    .sms-container {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
@@ -912,6 +1237,10 @@ h1, h2, h3, h4 {
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
     }
 }
 
@@ -959,8 +1288,20 @@ h1, h2, h3, h4 {
     
     .footer-bottom {
         flex-direction: column;
-        gap: 1rem;
         text-align: center;
+    }
+    
+    .main-content {
+        padding: 2rem 1rem;
+    }
+    
+    .mosque-section,
+    .rentals-section {
+        padding: 1.5rem;
+    }
+    
+    .sms-card {
+        padding: 1.5rem;
     }
 }
 
@@ -981,10 +1322,6 @@ h1, h2, h3, h4 {
         padding: 1rem;
     }
     
-    .main-content {
-        padding: 2rem 1rem;
-    }
-    
     .quote-card,
     .contact-form-container {
         padding: 1.5rem;
@@ -993,6 +1330,14 @@ h1, h2, h3, h4 {
     .islamic-ornament {
         gap: 1rem;
         font-size: 1.2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
     }
 }
 
@@ -1023,46 +1368,6 @@ h1, h2, h3, h4 {
     to { transform: rotate(360deg); }
 }
 
-/* Success/Error States */
-.success-message {
-    background: #d4edda;
-    color: #155724;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    margin: 1rem 0;
-    border-left: 4px solid #28a745;
-}
-
-.error-message {
-    background: #f8d7da;
-    color: #721c24;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    margin: 1rem 0;
-    border-left: 4px solid #dc3545;
-}
-
-/* Print Styles */
-@media print {
-    .main-nav,
-    .hero-section,
-    .footer,
-    .cta-btn,
-    .form-actions {
-        display: none !important;
-    }
-    
-    body {
-        color: #000;
-        background: #fff;
-    }
-    
-    .main-content {
-        padding: 0;
-        margin: 0;
-    }
-}
-/*new.   */
 /* Committees Page Styles */
 .committees-section {
     padding: 4rem 0;
@@ -1212,6 +1517,7 @@ h1, h2, h3, h4 {
     display: flex;
     gap: 0.5rem;
     margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .tag {
@@ -1308,6 +1614,8 @@ h1, h2, h3, h4 {
     justify-content: space-between;
     align-items: flex-start;
     padding: 1.5rem 1.5rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .announcement-category {
@@ -1413,6 +1721,7 @@ h1, h2, h3, h4 {
     padding: 1rem 1.5rem;
     border-top: 1px solid var(--light-gray);
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .announcement-btn {
@@ -1540,6 +1849,7 @@ h1, h2, h3, h4 {
     display: flex;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .subscribe-input {
@@ -1620,7 +1930,7 @@ h1, h2, h3, h4 {
     color: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Adjustments for New Pages */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .committees-grid,
     .announcements-grid {
@@ -1642,7 +1952,6 @@ h1, h2, h3, h4 {
     
     .announcement-header {
         flex-direction: column;
-        gap: 1rem;
         align-items: flex-start;
     }
     
@@ -1673,5 +1982,27 @@ h1, h2, h3, h4 {
     
     .subscribe-section {
         padding: 2rem 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .main-nav,
+    .hero-section,
+    .footer,
+    .cta-btn,
+    .form-actions,
+    .sms-subscribe-section {
+        display: none !important;
+    }
+    
+    body {
+        color: #000;
+        background: #fff;
+    }
+    
+    .main-content {
+        padding: 0;
+        margin: 0;
     }
 }
